@@ -8,20 +8,42 @@
 </head>
 <body>
 
+
+<div id="toast"></div>
+
+
+<div id="overlay" onclick="closeDrawer()"></div>
+
+
+<div id="leftDrawer">
+  <div class="drawer-header">
+    <span class="drawer-close" onclick="closeDrawer()">&#10005;</span>
+    <span class="drawer-logo">Medium</span>
+  </div>
+  <nav class="drawer-nav">
+    <div class="drawer-item">&#127968; Home</div>
+    <div class="drawer-item">&#128214; Reading list</div>
+    <div class="drawer-item">&#128276; Notifications</div>
+    <div class="drawer-item">&#9998; Write</div>
+    <div class="drawer-item">&#128100; Profile</div>
+    <div class="drawer-item">&#9881; Settings</div>
+  </nav>
+</div>
+
 <header>
   <div class="header-left">
-    <span class="menu-icon">&#9776;</span>
+    <span class="menu-icon" onclick="openDrawer()">&#9776;</span>
     <span class="logo">Medium</span>
-    <div class="search-box">
+    <div class="search-box" onclick="showToast('Search')">
       <span>&#128269;</span>
       <span>Search</span>
     </div>
   </div>
   <div class="header-right">
-    <div class="get-app-btn"><span>&#9783;</span> Get app</div>
-    <div class="write-btn"><span>&#9998;</span> Write</div>
-    <span class="icon-btn">&#128276;</span>
-    <div class="avatar">S</div>
+    <div class="get-app-btn" onclick="showToast('Get the Medium app')"><span>&#9783;</span> Get app</div>
+    <div class="write-btn" onclick="showToast('Start writing')"><span>&#9998;</span> Write</div>
+    <span class="icon-btn" onclick="showToast('Notifications')">&#128276;</span>
+    <div class="avatar" onclick="showToast('Your profile')">S</div>
   </div>
 </header>
 
